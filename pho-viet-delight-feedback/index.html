@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#742b24">
+  <meta name="description" content="Share your experience at Pho Viet Delight. Your feedback helps us serve you better.">
+  <title>Share Your Experience | Pho Viet Delight</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--wine:#742b24;--wine-dark:#4e1d19;--gold:#d7a84b;--cream:#fbf5e9;--ink:#2b2925;--muted:#77716a;--line:#e9dfcf}
+    *{box-sizing:border-box} body{margin:0;min-height:100vh;font-family:'DM Sans',sans-serif;color:var(--ink);background:var(--cream);display:flex;align-items:center;justify-content:center;padding:34px 18px;position:relative;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:radial-gradient(#c7a875 0.7px,transparent .7px);background-size:18px 18px}
+    .shell{width:min(100%,600px);position:relative;z-index:1}.card{background:#fffdf8;border:1px solid rgba(116,43,36,.12);border-radius:22px;overflow:hidden;box-shadow:0 22px 65px rgba(70,40,25,.13)}
+    .hero{min-height:220px;position:relative;display:flex;align-items:flex-end;padding:30px 34px;color:white;background:linear-gradient(0deg,rgba(38,20,15,.83),rgba(38,20,15,.08)),url('https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1500&q=85') center 54%/cover}
+    .hero:after{content:"";position:absolute;inset:12px;border:1px solid rgba(255,255,255,.38);border-radius:13px;pointer-events:none}.brand{position:relative;z-index:1}.eyebrow{text-transform:uppercase;letter-spacing:3px;font-size:10px;font-weight:700;color:#f1d9a8;margin:0 0 8px}.hero h1{font:700 clamp(29px,6vw,39px)/1.08 'Playfair Display',serif;margin:0}.hero p{font-size:13px;margin:9px 0 0;color:#f5eade}
+    .content{padding:32px 36px 34px;text-align:center}.ornament{display:flex;align-items:center;justify-content:center;gap:10px;color:var(--gold);font-size:13px;margin-bottom:13px}.ornament:before,.ornament:after{content:"";height:1px;width:42px;background:#dfcda9}.content h2{font:700 27px 'Playfair Display',serif;margin:0 0 8px;color:var(--wine-dark)}.intro{font-size:14px;line-height:1.65;color:var(--muted);margin:0 auto 23px;max-width:410px}
+    .stars{display:flex;justify-content:center;gap:8px;margin:0 auto 10px}.star{border:0;background:transparent;color:#d8d1c5;font-size:43px;line-height:1;padding:3px;cursor:pointer;transition:transform .16s,color .16s}.star:hover,.star:focus-visible{transform:translateY(-3px);outline:none}.star.active{color:var(--gold)}.star:focus-visible{border-radius:8px;box-shadow:0 0 0 3px rgba(215,168,75,.28)}.rating-hint{font-size:12px;color:#928a80;min-height:18px;margin:0 0 22px}
+    .feedback-panel{display:none;text-align:left;border-top:1px solid var(--line);padding-top:24px;margin-top:5px}.feedback-panel.visible{display:block;animation:rise .3s ease}.feedback-panel h3{font:700 21px 'Playfair Display',serif;color:var(--wine-dark);margin:0 0 6px}.feedback-panel>p{font-size:13px;color:var(--muted);margin:0 0 18px;line-height:1.55}.field{margin:0 0 14px}.field label{display:block;font-size:12px;font-weight:700;margin-bottom:7px;color:#514941}.field input,.field textarea{width:100%;border:1px solid #e5dac8;border-radius:10px;padding:12px 13px;font:14px 'DM Sans',sans-serif;color:var(--ink);background:#fffefa;outline:none;transition:border .2s,box-shadow .2s}.field input:focus,.field textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(215,168,75,.15)}.field textarea{min-height:108px;resize:vertical}.optional{font-weight:400;color:#928a80}.submit{width:100%;border:0;border-radius:10px;padding:14px 18px;background:var(--wine);color:white;font:700 14px 'DM Sans',sans-serif;cursor:pointer;transition:background .2s,transform .2s}.submit:hover{background:var(--wine-dark);transform:translateY(-1px)}.submit:disabled{opacity:.65;cursor:wait;transform:none}.success{display:none;text-align:center;padding:18px 0 4px}.success.visible{display:block;animation:rise .3s ease}.success-mark{width:48px;height:48px;border-radius:50%;background:#e8f1e5;color:#477344;display:grid;place-items:center;font-size:24px;margin:0 auto 13px}.success h3{font:700 23px 'Playfair Display',serif;color:var(--wine-dark);margin:0 0 7px}.success p{font-size:13px;line-height:1.6;color:var(--muted);margin:0}
+    .footer{text-align:center;padding:19px 12px 0;color:#938a7e;font-size:11px;letter-spacing:.3px}.footer span{color:var(--wine)}.hidden{position:absolute!important;left:-9999px!important}
+    @keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+    @media(max-width:520px){body{padding:16px 12px}.hero{min-height:190px;padding:25px 25px}.content{padding:27px 22px 29px}.content h2{font-size:24px}.star{font-size:39px;gap:4px}.stars{gap:5px}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="card" aria-labelledby="page-title">
+      <header class="hero">
+        <div class="brand">
+          <p class="eyebrow">A taste of Vietnam</p>
+          <h1 id="page-title">Pho Viet Delight</h1>
+          <p>Fresh flavours. Warm hospitality. Your feedback matters.</p>
+        </div>
+      </header>
+      <div class="content">
+        <div class="ornament" aria-hidden="true">✦</div>
+        <h2>How was your experience?</h2>
+        <p class="intro">Thank you for dining with us. Let us know how we did by choosing a star rating below.</p>
+        <div class="stars" role="group" aria-label="Rate your experience from one to five stars">
+          <button class="star" type="button" data-rating="1" aria-label="1 star" aria-pressed="false">★</button>
+          <button class="star" type="button" data-rating="2" aria-label="2 stars" aria-pressed="false">★</button>
+          <button class="star" type="button" data-rating="3" aria-label="3 stars" aria-pressed="false">★</button>
+          <button class="star" type="button" data-rating="4" aria-label="4 stars" aria-pressed="false">★</button>
+          <button class="star" type="button" data-rating="5" aria-label="5 stars" aria-pressed="false">★</button>
+        </div>
+        <p class="rating-hint" id="rating-hint" aria-live="polite">Tap a star to get started</p>
+
+        <!-- Netlify detects this form during deploy. Low ratings are submitted privately. -->
+        <form class="feedback-panel" name="private-feedback" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" id="feedback-form">
+          <input type="hidden" name="form-name" value="private-feedback">
+          <input type="hidden" name="rating" id="rating-value" value="">
+          <p class="hidden"><label>Don't fill this out: <input name="bot-field"></label></p>
+          <h3>Thank you for letting us know.</h3>
+          <p>We're sorry your visit didn't meet expectations. Please tell us a little more so our team can make things right.</p>
+          <div class="field"><label for="customer-name">Your name</label><input id="customer-name" name="name" type="text" placeholder="Name" required></div>
+          <div class="field"><label for="customer-email">Email address <span class="optional">(optional)</span></label><input id="customer-email" name="email" type="email" placeholder="you@example.com"></div>
+          <div class="field"><label for="customer-message">What could we have done better?</label><textarea id="customer-message" name="message" placeholder="Share your experience with us..." required></textarea></div>
+          <button class="submit" type="submit">Send private feedback</button>
+        </form>
+        <div class="success" id="success-message" role="status" aria-live="polite">
+          <div class="success-mark">✓</div>
+          <h3>Thank you for your feedback!</h3>
+          <p>Your comments have been sent privately to our team. We appreciate you helping us improve.</p>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">Made with care by <span>Pho Viet Delight</span></footer>
+  </main>
+  <script>
+    const GOOGLE_REVIEW_URL = 'https://www.google.com/maps/place//@46.4919591,-80.9903724,17z/data=!3m1!4b1!4m3!3m2!1s0x4d2fabb7a0876987:0xef94c9822840fae8!12e1?entry=ttu&g_ep=EgoyMDI2MTExNi4wIKXMDSoASAFQAw%3D%3D';
+    const stars = [...document.querySelectorAll('.star')];
+    const hint = document.getElementById('rating-hint');
+    const panel = document.getElementById('feedback-form');
+    const ratingInput = document.getElementById('rating-value');
+    const success = document.getElementById('success-message');
+    const labels = ['Sorry to hear that.','We appreciate your honesty.','Thanks for sharing your rating.','We're glad you enjoyed your visit!','Wonderful! Thank you for the 5-star rating!'];
+
+    stars.forEach(star => star.addEventListener('click', () => {
+      const rating = Number(star.dataset.rating);
+      stars.forEach(item => {
+        const active = Number(item.dataset.rating) <= rating;
+        item.classList.toggle('active', active);
+        item.setAttribute('aria-pressed', Number(item.dataset.rating) === rating ? 'true' : 'false');
+      });
+      hint.textContent = labels[rating - 1];
+      if (rating <= 3) {
+        ratingInput.value = rating;
+        panel.classList.add('visible');
+        success.classList.remove('visible');
+        panel.scrollIntoView({behavior:'smooth', block:'nearest'});
+      } else {
+        panel.classList.remove('visible');
+        // Send 4- and 5-star customers directly to the restaurant's Google listing.
+        window.location.href = GOOGLE_REVIEW_URL;
+      }
+    }));
+
+    panel.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const submit = panel.querySelector('.submit');
+      submit.disabled = true;
+      submit.textContent = 'Sending...';
+      try {
+        const formData = new FormData(panel);
+        const body = new URLSearchParams(formData).toString();
+        const response = await fetch('/', {
+          method: 'POST',
+          headers: {'Content-Type':'application/x-www-form-urlencoded'},
+          body
+        });
+        if (!response.ok) throw new Error('Form submission failed');
+        panel.classList.remove('visible');
+        success.classList.add('visible');
+      } catch (error) {
+        submit.disabled = false;
+        submit.textContent = 'Try sending again';
+        hint.textContent = 'We could not send your feedback. Please check your connection and try again.';
+      }
+    });
+  </script>
+</body>
+</html>
